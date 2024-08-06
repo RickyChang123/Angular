@@ -1,0 +1,22 @@
+<main>
+  <app-learning-resources />
+
+  <hr />
+
+  <app-auth />
+
+  <!-- @if(isAdmin()){
+  <p>Only admins should see this!</p>
+  } -->
+
+  <!-- ng-template-發生變化才會執行,常和ngif,ngfor一起用 -->
+
+  <!-- <ng-template appAuth="admin">
+    <p>Only admins should see this!</p>
+  </ng-template> -->
+
+  <!-- 加上*是ng-template的簡短寫法 -->
+  <p *appAuth="'admin'" class="protected-content admin">
+    Only admins should see this!
+  </p>
+</main>
